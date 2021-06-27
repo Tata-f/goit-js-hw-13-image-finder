@@ -21,4 +21,4 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{"../templates/photo-card.hbs":"Dymv","./apiService":"oGEW","../javascript/notification":"pLcp","basiclightbox":"BNjD"}],"Focm":[function(require,module,exports) {
 "use strict";require("./css/styles.css"),require("./javascript/image-finder");
 },{"./css/styles.css":"krre","./javascript/image-finder":"CstF"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.a99d7c36.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.bb24c7a5.js.map
