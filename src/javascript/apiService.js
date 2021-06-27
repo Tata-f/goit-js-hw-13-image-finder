@@ -14,7 +14,7 @@ export default class ApiService {
       .then(({ hits }) => {
         this.incrementPage();
         return hits;
-      });
+      })
   }
 
   incrementPage() {
