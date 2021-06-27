@@ -29,6 +29,7 @@ function onSearchForm(e) {
 function onLoadMore() {
   apiService.fetchPhotoCards().then(appendPhotoCardMarkup);
   $gallery.scrollIntoView({block: "end", behavior: "smooth"});
+
 }
 
 function appendPhotoCardMarkup(hits) {
