@@ -1,6 +1,5 @@
 import photoCard from './templates/photo-card.hbs'
 import ApiService from './javascript/apiService';
-import {info} from './javascript/notification'
 import './css/styles.css';
 
 const $searchForm = document.querySelector('.search-form');
@@ -15,10 +14,10 @@ $loadMoreBtn.addEventListener('click', onLoadMore);
 function onSearchForm(e) {
   e.preventDefault();
 
-  apiService.query = e.currentTarget.elements.query.value;
+  apiService.searchQuery = e.currentTarget.elements.query.value;
 
-  if(apiService.query === '') {
-     return info('Что будем искать?')
+  if(apiService.searchQuery === '') {
+     return alert('Что будем искать?')
       
   }
 
