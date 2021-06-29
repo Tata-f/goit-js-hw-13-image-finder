@@ -29,12 +29,15 @@ function onSearchForm(e) {
 }
 
 function onLoadMore() {
-  apiService.fetchPhotoCards().then(appendPhotoCardMarkup);
-  $gallery.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  apiService.fetchPhotoCards().then(appendPhotoCardMarkup).then(scrollToEnd);
+
 }
 
 function appendPhotoCardMarkup(hits) {
   $gallery.insertAdjacentHTML('beforeend', photoCard(hits));
+  if(hits.length !==0) {
+    $loadMoreBtn.classList.remove('is-hidden')
+  } 
 }
 
 function clearGallery() {
@@ -47,3 +50,8 @@ function onImageClick(e) {
 
   const instance = basicLightbox.create(` <img src="${largeImage}">`).show();
 }
+
+function scrollToEnd() {
+  $gallery.scrollIntoView({ block: 'end', behavior: 'smooth' })
+}
+
